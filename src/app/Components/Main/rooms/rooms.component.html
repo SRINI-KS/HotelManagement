@@ -1,0 +1,9 @@
+<div>
+    Total Rooms :{{rooms.totalRooms}}
+<br>
+Available Rooms :{{rooms.availableRooms}}
+</div>
+
+<div *ngFor="let item of roomsDetails">
+  <img [src]="item.image" alt="" />
+</div>
