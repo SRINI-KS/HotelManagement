@@ -12,5 +12,6 @@ export interface RoomDetails{
     image:string;
     checkInTime:Date;
     checkOutTime:Date;
+    rating:number;
 
 }

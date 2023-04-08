@@ -1,9 +1,17 @@
 <div>
-    Total Rooms :{{rooms.totalRooms}}
-<br>
-Available Rooms :{{rooms.availableRooms}}
+  Total Rooms :{{ rooms.totalRooms }}
+  <br />
+  Available Rooms :{{ rooms.availableRooms }}
+</div>
+<div>
+  {{selectedRoom|json}}
 </div>
 
-<div *ngFor="let item of roomsDetails">
-  <img [src]="item.image" alt="" />
+<div>
+  <button class="btn btn-success" (click)="addRoom()">Add room</button>
 </div>
+<div >
+  <app-room-table [roomsDetails]="roomsDetails" (selectedRoom)="select($event)"></app-room-table>
+  <button class="btn btn-primary m-5">click</button>
+</div>
+
