@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ViewChild } from '@angular/core';
 import { Room, RoomDetails } from '../Room';
+import { HeaderTitleComponent } from '../header-title/header-title.component';
 
 @Component({
   selector: 'app-rooms',
@@ -7,7 +8,9 @@ import { Room, RoomDetails } from '../Room';
   styleUrls: ['./rooms.component.css'],
   changeDetection:ChangeDetectionStrategy.OnPush
 })
-export class RoomsComponent{
+export class RoomsComponent {
+
+  @ViewChild(HeaderTitleComponent) headerTitle!:HeaderTitleComponent;
 
   
   selectedRoom!:RoomDetails;
@@ -86,5 +89,9 @@ export class RoomsComponent{
 
   }
   this.roomsDetails=[...this.roomsDetails,newRoom];
+}
+
+changeTitle(){
+  this.headerTitle.title='ROOM LISTS'
 }
 }

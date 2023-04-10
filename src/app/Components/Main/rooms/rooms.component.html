@@ -1,4 +1,7 @@
 <div>
+  <app-header-title></app-header-title>
+</div>
+<div>
   Total Rooms :{{ rooms.totalRooms }}
   <br />
   Available Rooms :{{ rooms.availableRooms }}
@@ -12,6 +15,6 @@
 </div>
 <div >
   <app-room-table [roomsDetails]="roomsDetails" (selectedRoom)="select($event)"></app-room-table>
-  <button class="btn btn-primary m-5">click</button>
+  <button class="btn btn-primary m-5" (click)="changeTitle()">click</button>
 </div>
 

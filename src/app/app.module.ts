@@ -5,12 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RoomsComponent } from './Components/Main/rooms/rooms.component';
 import { RoomTableComponent } from './Components/Main/rooms/room-table/room-table.component';
+import { HeaderTitleComponent } from './Components/Main/header-title/header-title.component';
+import { ContainerComponent } from './Components/Main/container/container.component';
+import { EmployeesComponent } from './Components/Main/employees/employees.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoomsComponent,
-    RoomTableComponent
+    RoomTableComponent,
+    HeaderTitleComponent,
+    ContainerComponent,
+    EmployeesComponent
   ],
   imports: [
     BrowserModule,
